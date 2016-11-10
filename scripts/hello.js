@@ -2,7 +2,7 @@
 //   인사를 돌려줍니다.
 //
 // Commands:
-//   huibot 안녕|하이|헬로|hi|hello|hey
+//   huibot 반갑다|반가워|방가|안녕|안뇽|하이|헤이|헬로|hi|hello|hey
 
 const prefix = ":robot_face:";
 const responses = [
@@ -32,8 +32,9 @@ const responses = [
 ];
 
 module.exports = (robot) => {
-  robot.respond(/안녕|하이|헬로|hi|hello|hey/i, (msg) => {
-    let response = responses.sort(() => .5 - Math.random())[0];
+  robot.respond(/너|반갑다|반가|방가|안녕|안뇽|야|와썹|요|저기|하이|헤이|헬로|hello|hi|hey|yo/i, (msg) => {
+    const response = responses.sort(() => .5 - Math.random())[0];
+
     msg.send(`${prefix} ${response}`);
   });
 };
