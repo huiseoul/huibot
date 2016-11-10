@@ -2,7 +2,7 @@
 //   인사를 돌려줍니다.
 //
 // Commands:
-//   hui-bot 안녕|하이|헬로|hi|hello|hey
+//   huibot 안녕|하이|헬로|hi|hello|hey
 
 const prefix = ":robot_face:";
 const responses = [
