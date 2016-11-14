@@ -7,6 +7,11 @@
 // Author:
 //   Jitae Kim
 
+const menus = {
+  '맥도날드': 'https://www.mcdelivery.co.kr/kr/browse/menu.html',
+  '버거킹': 'https://delivery.burgerking.co.kr/menu/SpecialOffer',
+  '본도시락': 'http://www.bondosirak.com/brand/menu_list2.asp',
+};
 const prefix = ":robot_face:";
 const responses = [
   '주문하시겠어요?',
@@ -20,5 +25,17 @@ module.exports = (robot) => {
     const response = responses.sort(() => .5 - Math.random())[0];
 
     msg.send(`${prefix} <@howon86>, <@hyungang.yang> ${response}`);
+  });
+
+  robot.hear(/맥도날드/, (msg) => {
+    msg.send(`${prefix} ${menus['맥도날드']}`);
+  });
+
+  robot.hear(/버거킹/, (msg) => {
+    msg.send(`${prefix} ${menus['버거킹']}`);
+  });
+
+  robot.hear(/본\s*도시락/, (msg) => {
+    msg.send(`${prefix} ${menus['본도시락']}`);
   });
 };
