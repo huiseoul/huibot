@@ -24,7 +24,7 @@ module.exports = (robot) => {
   robot.hear(/(?=.*(도시락|맥도날드|버거|식사|치킨|피자).*)(?=.*(드시|드실|먹으|배달|시켜|시키|시킬|주문).*)/, (msg) => {
     const response = responses.sort(() => .5 - Math.random())[0];
 
-    msg.send(`${prefix} <@howon86>, <@hyungang.yang> ${response}`);
+    msg.send('*hyungang.yang* 다이어트 화이팅!');
   });
 
   robot.hear(/맥도날드/, (msg) => {
