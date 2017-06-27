@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "huibot",
+      "script": "bin/hubot",
+      "exec_interpreter": "bash",
+      "args": "--adapter slack --name huibot --alias 후이봇",
+      "port": "8082",
+      "env": {
+        "PORT": "8082"
+      }
+    }
+  ]
+}
